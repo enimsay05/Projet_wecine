@@ -1,0 +1,13 @@
+  <nav style = "background-color: #eee;height: 35px;" >
+    <a style="cursor: pointer;" *ngFor="let genres of genre " (click)="gotoMoviesGenre('/movieGenre',genres.id)"> {{ genres.name }} | </a>
+  </nav>
+  <h3>film tendance</h3>
+  <youtube-player 
+videoId="{{lienTopMovie}}" suggestedQuality="highres" [height]="200" [width]="100" >
+</youtube-player>
+<br><br>
+<nav style = "background-color: #eee;height: 35px;" >
+    <p><b>Film par genre selectionné</b></p>
+</nav>
+  <router-outlet></router-outlet>
+

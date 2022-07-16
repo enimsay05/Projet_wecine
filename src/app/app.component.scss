@@ -1,0 +1,196 @@
+$color_1: #000;
+$color_2: #000;
+$font-family_1: helvetica;
+// $background-color_1: rgb(0, 0, 0, 0.3);
+$background-color_2: #fff;
+$background-color_3: #2a2a2a;
+$background-color_1: #ebe084;
+$background-color_2: darken(#ebe084, 15%);
+body {
+	padding: 0;
+	margin: 0;
+	//background-image: url(https://www.nti-audio.com/portals/0/pics/en/Teaser-Cinema-1200-500.jpg);
+	background-color: #fff;
+	backdrop-filter: blur(13px);
+	background-attachment: fixed;
+	background-size: auto;
+	font-family: $font-family_1;
+}
+nav {
+	text-align: center;
+	// background-color: $background-color_1;
+	height: 70px;
+}
+a {
+	color: $color_1;
+}
+.nav-links {
+	text-align: center;
+	text-decoration: none;
+	font-size: 30px;
+	margin: 10px;
+	padding: 5px;
+	// border: 1px solid rgb(255, 255, 255, 0.3);
+	border-radius: 5px;
+	&:hover {
+		background-color: $background-color_2;
+		color: $color_2;
+	}
+}
+.box-filmes {
+	text-align: center;
+	// border: solid 1px rgb(255, 255, 255, 0.3);
+	width: 230px;
+	margin: 10px;
+	// background-color: $background-color_1;
+	&:hover {
+		border: 1px solid #fff;
+		transform: scale(1.05);
+		box-shadow: 0px 0px 5px 0px #fff;
+	}
+}
+.div-filmes {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+p {
+	margin: 0;
+	color: $color_1;
+	text-align: center;
+}
+h3 {
+	color: $color_1;
+	text-align: center;
+}
+h1 {
+	color: $color_1;
+	text-align: center;
+}
+.capas-filmes {
+	width: 158px;
+	height: 223px;
+}
+iframe {
+	width: 80%;
+	height: 450px;
+	margin: 10px;
+	margin-left: 130px;
+}
+@media screen and (max-width: 900px) {
+	body {
+		background-image: none;
+		background-color: $background-color_3;
+	}
+	nav {
+		background: none;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.nav-links {
+		border: 1px solid #fff;
+	}
+	.div-filmes {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 280px;
+	}
+	.box-filmes {
+		border: 1px solid #fff;
+		width: 150px;
+		height: 260px;
+		font-size: 10px;
+	}
+	.capas-filmes {
+		width: 150px;
+		height: 230px;
+	}
+	h3 {
+		display: flex;
+		flex-direction: column;
+		margin-top: 310px;
+		margin-bottom: -260px;
+	}
+	h1 {
+		display: flex;
+		flex-direction: column;
+		margin-top: 310px;
+		margin-bottom: -260px;
+	}
+	iframe {
+		height: 250px;
+		margin: 0;
+		margin-top: 300px;
+		margin-left: 35px;
+	}
+}
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+	.nav-links {
+		font-size: 50px;
+	}
+	h1 {
+		font-size: 50px;
+	}
+	h3 {
+		font-size: 50px;
+	}
+	.capas-filmes {
+		width: 430px;
+		height: 630px;
+	}
+	.box-filmes {
+		width: 430px;
+		height: 730px;
+		font-size: 30px;
+		margin-top: 50px;
+	}
+	iframe {
+		transform: scale(1.9);
+		width: 1000px;
+		margin-top: 200px;
+		margin-left: 458px;
+	}
+}
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px;
+}
+.modal-overlay {
+	background: rgba(0, 0, 0, 0.6);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.modal--modal-content {
+	box-shadow: 0 1px 3px 0 rgba(38,41,58,.06);
+	width: 100%;
+	max-width: 1040px;
+	padding: 30px;
+	background: white;
+	position: relative;
+}
+.modal--close-btn {
+	position: absolute;
+	top: -15px;
+	right: -13px;
+	font-size: 18px;
+	color: $color_1;
+	background-color: $background-color_1;
+	padding: 8px 10px;
+	border-radius: 30px;
+	&:hover {
+		background-color: $background-color_2;
+		cursor: pointer;
+	}
+}

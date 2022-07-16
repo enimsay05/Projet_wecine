@@ -1,0 +1,16 @@
+ <div class="modal">
+      <div class="modal-overlay" (click)="close($event)"></div>
+      <div class="modal--modal-content">
+        <b>Bande d'annonce</b>
+        <youtube-player videoId="{{youtube}}" suggestedQuality="highres" [height]="200" [width]="100" >
+        </youtube-player>
+        <h2 [innerHTML]="modalMovie.title"></h2>
+        <b>Description:</b>
+        <div [innerHTML]="modalMovie.overview"></div>
+        <b>Date:</b>
+        <div [innerHTML]="modalMovie.release_date"></div>
+        <b>Langue d'origine:</b>
+        <div [innerHTML]="modalMovie.original_language"></div>
+        <a class="modal--close-btn" (click)="close($event)">X</a>
+      </div>
+    </div>

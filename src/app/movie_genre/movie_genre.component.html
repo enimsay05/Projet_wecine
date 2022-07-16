@@ -1,0 +1,15 @@
+
+<div class="div-filmes">
+
+    <div class="box-filmes" *ngFor="let movie of movies ">
+      <a   href="#"  title="Cliquer pour plus de details" (click)="openModal($event, movie )" >
+          <br>
+          <img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}"  class="capas-filmes">
+      </a>
+      <div style="cursor: pointer;"> 
+        {{ movie.original_title }} <br>
+        <b>date:</b> {{ movie.release_date }} <br> 
+        <b>note:</b> {{ movie.vote_average }}/10 <br> 
+      </div>
+    </div> 
+  </div>
