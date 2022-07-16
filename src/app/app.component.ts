@@ -24,7 +24,6 @@ import { Router } from "@angular/router";
     this.lienTopMovie  = localStorage.getItem('lienMovie');
    }
   ngOnInit() {
-    console.log("lientop movie"+this.lienTopMovie);
   }
 
   public gotoMoviesGenre(url, id) {
